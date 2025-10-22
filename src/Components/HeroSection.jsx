@@ -15,7 +15,10 @@ const HeroSection = () => {
           <br className="hidden sm:block" /> Healthy During The Cold Season
         </p>
         <div className="flex flex-col sm:flex-row justify-center xl:justify-start  items-center gap-3">
-          <Link className="btn bg-[#E88743] shadow-xl hover:bg-[#bb7440] hover:cursor-pointer font-bold w-full sm:w-auto">
+          <Link
+            to="/contactus"
+            className="btn bg-[#E88743] shadow-xl hover:bg-[#bb7440] hover:cursor-pointer font-bold w-full sm:w-auto"
+          >
             Contact Us
           </Link>
           <Link className="btn btn-outline shadow-xl hover:bg-[#E88743] hover:cursor-pointer font-bold w-full sm:w-auto">

@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/chfZv5Q0/Winter-Coat-Fitting-for-Dogs.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.ibb.co.com/ksm7FGbG/create-a-image-Winter-Grooming-Paw-Treatment.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Indoor Play & Exercise",
+    "providerName": "Furry Fun Club",
+    "providerEmail": "contact@furryfun.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Indoor activity sessions to keep your pets active and entertained during cold days.",
+    "image": "https://i.ibb.co.com/1GHxsjNF/Indoor-Play-Exercise.png",
+    "category": "Exercise"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Health Check-Up",
+    "providerName": "HealthyPaws Vet Clinic",
+    "providerEmail": "appointments@healthypaws.com",
+    "price": 40,
+    "rating": 4.9,
+    "slotsAvailable": 6,
+    "description": "Comprehensive winter check-up including vaccination review and cold-weather health advice.",
+    "image": "https://i.ibb.co.com/gnvw7SM/Winter-Health-Check-Up.png",
+    "category": "Medical"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Pet Winter Accessories Shopping",
+    "providerName": "Furry Fashion Store",
+    "providerEmail": "support@furryfashion.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 8,
+    "description": "Choose from a wide range of winter hats, boots, and scarves for pets of all sizes.",
+    "image": "https://i.ibb.co.com/bj5v0CDs/Winter-Accessories-Shopping.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Diet & Nutrition Consultation",
+    "providerName": "NutriPets",
+    "providerEmail": "advice@nutripets.com",
+    "price": 35,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Expert guidance on keeping your pets healthy with winter-appropriate diets and supplements.",
+    "image": "https://i.ibb.co.com/kPkdkdr/Diet-Nutrition-Consultation.png",
+    "category": "Nutrition"
+  }
+]

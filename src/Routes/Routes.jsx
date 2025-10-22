@@ -4,6 +4,7 @@ import MainLayouuts from '../Layout/MainLayouuts';
 import Home from '../Pages/Home';
 import Services from '../Pages/Services';
 import MyProfile from '../Pages/MyProfile';
+import ContactUs from '../Components/ContactUs/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/myprofile',
         element: <MyProfile />,
+      },
+      {
+        path: '/contactus',
+        element: <ContactUs />,
       },
     ],
   },
