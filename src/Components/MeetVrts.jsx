@@ -43,7 +43,7 @@ const MeetOurVets = () => {
           <h2 className="text-3xl font-extrabold text-[#4A2C1D]">
             Meet Our Expert Vets
           </h2>
-          <p className="mt-2 text-lg text-[#6A4E3A] max-w-2xl mx-auto">
+          <p className="mt-2 text-lg text-[#6A4E3A] mx-auto">
             A friendly team of veterinarians dedicated to keeping your pets
             safe, warm, and healthy during winter.
           </p>
