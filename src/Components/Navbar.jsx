@@ -1,10 +1,21 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext/Authcontext';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Navbar = () => {
   const { user, singOutUser } = use(AuthContext);
 
+  //SingOut Or LogOut user
+  const handleSingOut = () => {
+    singOutUser()
+      .then(() => {
+        toast('sing-out succesful.');
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  };
   const links = (
     <>
       <li>
@@ -17,11 +28,13 @@ const Navbar = () => {
           Services
         </NavLink>
       </li>
-      <li>
-        <NavLink className="font-semibold text-white" to="/myprofile">
-          My profile
-        </NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink className="font-semibold text-white" to="/myprofile">
+            My profile
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -61,6 +74,15 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
+        <div className="flex flex-col items-center mr-3.5">
+          {user && (
+            <img
+              className="h-9.5 w-9.5 rounded-full"
+              src={user?.photoURL}
+              alt="profile Picture"
+            />
+          )}
+        </div>
         {user ? (
           <a
             onClick={handleSingOut}
@@ -77,6 +99,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };

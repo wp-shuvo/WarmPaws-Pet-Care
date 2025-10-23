@@ -3,10 +3,10 @@ import { createBrowserRouter } from 'react-router';
 import MainLayouuts from '../Layout/MainLayouuts';
 import Home from '../Pages/Home';
 import Services from '../Pages/Services';
-import MyProfile from '../Pages/MyProfile';
 import ContactUs from '../Components/ContactUs/ContactUs';
 import Login from '../Components/LogInOut/Login';
 import Register from '../Components/LogInOut/Register';
+import MyProfile from '../Pages/MyProfile/MyProfile';
 
 const router = createBrowserRouter([
   {
