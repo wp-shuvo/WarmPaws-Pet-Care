@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -17,13 +18,16 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setloading] = useState(true);
   const [errorInvalid, setErrorInvalid] = useState('');
+
   // register new user ==>>
   const registerUser = (email, password) => {
+    setloading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // Login USER ==>>
   const loginUser = (email, password) => {
+    setloading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -35,6 +39,7 @@ const AuthProvider = ({ children }) => {
 
   // SingOut or LogOut user
   const singOutUser = () => {
+    setloading(true);
     return signOut(auth);
   };
 
@@ -59,6 +64,11 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  // forget password
+  const forgetPassword = email => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
   const authInfo = {
     user,
     registerUser,
@@ -69,6 +79,7 @@ const AuthProvider = ({ children }) => {
     singOutUser,
     loading,
     updateUserProfile,
+    forgetPassword,
   };
 
   return <AuthContext value={authInfo}>{children}</AuthContext>;

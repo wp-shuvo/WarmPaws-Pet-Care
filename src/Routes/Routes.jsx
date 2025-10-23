@@ -7,6 +7,8 @@ import ContactUs from '../Components/ContactUs/ContactUs';
 import Login from '../Components/LogInOut/Login';
 import Register from '../Components/LogInOut/Register';
 import MyProfile from '../Pages/MyProfile/MyProfile';
+import PrivateRoutes from './PrivateRoutes';
+import ForgetPass from '../Components/LogInOut/ForgetPass';
 
 const router = createBrowserRouter([
   {
@@ -19,11 +21,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/services',
-        element: <Services />,
+        element: (
+          <PrivateRoutes>
+            <Services />
+          </PrivateRoutes>
+        ),
       },
       {
         path: '/myprofile',
-        element: <MyProfile />,
+        element: (
+          <PrivateRoutes>
+            <MyProfile />
+          </PrivateRoutes>
+        ),
       },
       {
         path: '/contactus',
@@ -36,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register />,
+      },
+      {
+        path: '/forgetPassword',
+        element: <ForgetPass />,
       },
     ],
   },

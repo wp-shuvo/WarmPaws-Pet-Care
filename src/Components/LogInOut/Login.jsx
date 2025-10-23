@@ -1,10 +1,13 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
-import { Bounce, toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const { loginUser, singInWithGoogle } = use(AuthContext);
+  const location = useLocation();
+  const naviagte = useNavigate();
+
   const handleSingIn = event => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -16,7 +19,7 @@ const Login = () => {
         console.log(result.user);
         event.target.reset();
         toast('✅ login successfully!');
-        // naviagte(location?.state || '/');
+        naviagte(location?.state || '/');
       })
       .catch(error => {
         console.log(error.message);
@@ -30,7 +33,7 @@ const Login = () => {
       .then(result => {
         toast('✅ login successfully!');
         console.log(result.user);
-        // naviagte(location?.state || '/');
+        naviagte(location?.state || '/');
       })
       .catch(error => {
         console.log(error.message);
@@ -66,9 +69,12 @@ const Login = () => {
                 />
 
                 <div className="mt-2 text-left">
-                  <a className="link link-hover text-[#E88743]">
+                  <Link
+                    to="/forgetPassword"
+                    className="link link-hover text-[#E88743]"
+                  >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
 
                 <button className="btn bg-[#E88743]  text-white mt-4 hover:bg-[#C55C2E]">

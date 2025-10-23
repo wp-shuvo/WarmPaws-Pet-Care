@@ -1,11 +1,14 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
 import { toast } from 'react-toastify';
 
 const Register = () => {
   const { registerUser, errorInvalid, setErrorInvalid, setUser } =
     use(AuthContext);
+  const location = useLocation();
+  const naviagte = useNavigate();
+
   const handleRegister = event => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -31,12 +34,13 @@ const Register = () => {
         console.log(result.user);
         setErrorInvalid('');
         toast('✅ Account created successfully!');
-        setUser({
-          ...result.user,
-          displayName: name,
-          photoURL: ptotoUrl,
-        });
+        // setUser({
+        //   ...result.user,
+        //   displayName: name,
+        //   photoURL: ptotoUrl,
+        // });
         event.target.reset();
+        naviagte(location?.state || '/');
       })
       .catch(error => {
         console.log(error.message);
