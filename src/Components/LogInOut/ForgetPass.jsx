@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
 import { toast } from 'react-toastify';
+import 'animate.css';
 
 function ForgetPass() {
   const { forgetPassword } = useContext(AuthContext);
@@ -10,7 +11,7 @@ function ForgetPass() {
     const email = e.target.email.value;
 
     if (!email) {
-      console.log('Please provide an email address.');
+      toast('Please provide an email address.');
       return;
     }
 
@@ -27,10 +28,10 @@ function ForgetPass() {
   };
 
   return (
-    <div className="hero">
+    <div className="hero mt-10">
       <div className="hero-content flex-col">
         {/* Left Section (Text) */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-5 animate__animated animate__fadeInDown">
           <h1 className="text-5xl font-bold text-[#4A2C1D]">Reset Password</h1>
         </div>
 

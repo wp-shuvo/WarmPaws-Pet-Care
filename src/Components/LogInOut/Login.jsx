@@ -1,11 +1,13 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
 import { toast } from 'react-toastify';
 import 'animate.css';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
   const { loginUser, singInWithGoogle } = use(AuthContext);
+  const [showPass, setShowPass] = useState(false);
   const location = useLocation();
   const naviagte = useNavigate();
 
@@ -60,14 +62,22 @@ const Login = () => {
                   className="input input-bordered w-full border-[#F0DCC2] focus:outline-none focus:ring-2 focus:ring-[#E88743]"
                   placeholder="Email"
                 />
-
-                <label className="label text-[#4A2C1D]">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="input input-bordered w-full border-[#F0DCC2] focus:outline-none focus:ring-2 focus:ring-[#E88743]"
-                  placeholder="Password"
-                />
+                {/* Password fill */}
+                <div className="relative">
+                  <label className="label text-[#4A2C1D]">Password</label>
+                  <input
+                    type={showPass ? 'text' : 'password'}
+                    name="password"
+                    className="input input-bordered w-full border-[#F0DCC2] focus:outline-none focus:ring-2 focus:ring-[#E88743] z-0"
+                    placeholder="Password"
+                  />
+                  <div
+                    onClick={() => setShowPass(!showPass)}
+                    className="absolute right-3 bottom-4 cursor-pointer text-black z-40"
+                  >
+                    {showPass ? <FaEyeSlash /> : <FaEye />}
+                  </div>
+                </div>
 
                 <div className="mt-2 text-left">
                   <Link

@@ -13,6 +13,8 @@ const Services = () => {
     rating,
     description,
     image,
+    category,
+    slotsAvailable,
   } = data;
   console.log(serviceId);
   return (
@@ -34,9 +36,21 @@ const Services = () => {
             <h3 className="text-2xl font-semibold text-[#4A2C1D] mb-2">
               {serviceName}
             </h3>
-            <p className="text-[#6A4E3A] mb-2">Provider: {providerName}</p>
-            <p className="text-[#6A4E3A] mb-2">Email: {providerEmail}</p>
-            <p className="text-[#6A4E3A] mb-3">⭐ {rating} / 5</p>
+            <p className="text-[#6A4E3A] font-medium mb-2">
+              Provider: {providerName}
+            </p>
+            <p className="text-[#6A4E3A] font-medium mb-2">
+              Email: {providerEmail}
+            </p>
+            <p className="text-[#6A4E3A] font-medium mb-2">
+              Category: {category}
+            </p>
+            <p className="text-[#6A4E3A] font-medium mb-2">
+              Slots Available: {slotsAvailable}
+            </p>
+            <p className="text-[#6A4E3A] font-medium mb-3">
+              Rating: ⭐ {rating} / 5
+            </p>
             <p className="text-lg font-bold text-[#E88743] mb-4">
               Price: ${price}
             </p>
