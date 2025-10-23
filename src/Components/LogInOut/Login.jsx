@@ -62,7 +62,7 @@ const Login = () => {
                   className="input input-bordered w-full border-[#F0DCC2] focus:outline-none focus:ring-2 focus:ring-[#E88743]"
                   placeholder="Email"
                 />
-                {/* Password fill */}
+                {/* Password */}
                 <div className="relative">
                   <label className="label text-[#4A2C1D]">Password</label>
                   <input
