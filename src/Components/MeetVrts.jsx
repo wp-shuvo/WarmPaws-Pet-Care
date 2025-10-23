@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const experts = [
   {
@@ -94,12 +95,12 @@ const MeetOurVets = () => {
                 </div>
 
                 <div className="mt-6 flex items-center justify-between">
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contactus"
                     className="inline-flex items-center gap-2 px-3 py-2 text-sm font-semibold rounded-lg bg-[#E88743] text-white shadow-sm hover:bg-[#C55C2E]"
                   >
                     Contact
-                  </a>
+                  </Link>
 
                   <div className="flex items-center gap-3">
                     <button
@@ -141,9 +142,9 @@ const MeetOurVets = () => {
         <div className="mt-8 text-center">
           <p className="text-sm text-[#6A4E3A]">
             Need help choosing the right winter care for your pet?{' '}
-            <a href="#contact" className="font-semibold text-[#C55C2E]">
+            <Link to="/contactus" className="font-semibold text-[#C55C2E]">
               Contact our team
-            </a>
+            </Link>
             .
           </p>
         </div>

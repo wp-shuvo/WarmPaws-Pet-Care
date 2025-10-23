@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../Context/AuthContext/Authcontext';
 
 const Navbar = () => {
+  const { user, singOutUser } = use(AuthContext);
+
   const links = (
     <>
       <li>
-        <NavLink className="font-semibold" to="/">
+        <NavLink className="font-semibold text-white" to="/">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className="font-semibold" to="/services">
+        <NavLink className="font-semibold text-white" to="/services">
           Services
         </NavLink>
       </li>
       <li>
-        <NavLink className="font-semibold" to="/myprofile">
+        <NavLink className="font-semibold text-white" to="/myprofile">
           My profile
         </NavLink>
       </li>
@@ -45,12 +48,12 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-semibold"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-semibold "
           >
             {links}
           </ul>
         </div>
-        <Link to="/" className="text-xl font-bold">
+        <Link to="/" className="text-xl font-bold text-white">
           WarmPaws
         </Link>
       </div>
@@ -58,9 +61,21 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="px-7 py-2 rounded-xl bg-[#E88743] shadow-xl hover:bg-[#bb7440] hover:cursor-pointer font-bold">
-          LogIn
-        </a>
+        {user ? (
+          <a
+            onClick={handleSingOut}
+            className="px-7 py-2 rounded-xl bg-[#E88743] shadow-xl hover:bg-[#bb7440] hover:cursor-pointer font-bold"
+          >
+            LogOut
+          </a>
+        ) : (
+          <Link
+            to="/login"
+            className="px-7 py-2 rounded-xl bg-[#E88743] shadow-xl hover:bg-[#bb7440] hover:cursor-pointer font-bold"
+          >
+            LogIn
+          </Link>
+        )}
       </div>
     </div>
   );

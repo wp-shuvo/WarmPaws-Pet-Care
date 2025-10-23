@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-evenly lg:items-center  gap-8 text-center md:text-left">
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
-          <p>📍 123 Main Street, Dhaka, Bangladesh</p>
+          <p>📍 45 Pet Care Avenue, Dhaka, Bangladesh</p>
           <p>📞 +880 1234-567890</p>
           <p>✉️ support@warmpaws.com</p>
         </div>
