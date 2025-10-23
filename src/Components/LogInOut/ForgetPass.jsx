@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
+import { toast } from 'react-toastify';
 
 function ForgetPass() {
   const { forgetPassword } = useContext(AuthContext);
@@ -16,17 +17,17 @@ function ForgetPass() {
     forgetPassword(email)
       .then(res => {
         console.log('Password reset email sent successfully:', res);
-        alert('Password reset email sent! Please check your inbox.');
-        e.target.reset(); // Clear the form after successful submission
+        toast('Password reset email sent! Please check your inbox.');
+        e.target.reset();
       })
       .catch(error => {
-        console.error('Error sending password reset email:', error);
-        alert('Failed to send password reset email. Please try again.');
+        console.error('Error sending password reset email:', error.message);
+        toast('Failed to send password reset email. Please try again.');
       });
   };
 
   return (
-    <div className="hero min-h-screen">
+    <div className="hero">
       <div className="hero-content flex-col">
         {/* Left Section (Text) */}
         <div className="text-center mb-5">

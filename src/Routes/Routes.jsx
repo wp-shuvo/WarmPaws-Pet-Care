@@ -20,12 +20,19 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/services',
+        path: '/services/:serviceId',
         element: (
           <PrivateRoutes>
             <Services />
           </PrivateRoutes>
         ),
+        loader: async ({ params }) => {
+          const res = await fetch('/public/serviecs.json');
+          const data = await res.json();
+          const singleData = data.find(s => s.serviceId == params.serviceId);
+          console.log(singleData);
+          return singleData;
+        },
       },
       {
         path: '/myprofile',

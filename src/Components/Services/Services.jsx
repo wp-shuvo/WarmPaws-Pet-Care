@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 
 const Services = () => {
   const [services, setServices] = useState([]);
 
-  // Load data from public/services.json
+  // Load data
+
   useEffect(() => {
     fetch('../../../public/serviecs.json')
       .then(res => res.json())
@@ -42,10 +44,11 @@ const Services = () => {
               <p className="text-lg font-bold text-[#E88743] mb-4">
                 ${service.price}
               </p>
-
-              <button className="w-full bg-[#E88743] text-white py-2 rounded-lg font-medium hover:bg-[#C55C2E] transition">
-                View Details
-              </button>
+              <Link to={`/services/${service.serviceId}`}>
+                <button className="w-full bg-[#E88743] text-white py-2 rounded-lg font-medium hover:bg-[#C55C2E] transition">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         ))}

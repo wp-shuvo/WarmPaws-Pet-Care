@@ -21,7 +21,10 @@ const HeroSection = () => {
           >
             Contact Us
           </Link>
-          <Link className="btn btn-outline shadow-xl hover:bg-[#E88743] hover:cursor-pointer font-bold w-full sm:w-auto">
+          <Link
+            to="/services"
+            className="btn btn-outline shadow-xl hover:bg-[#E88743] hover:cursor-pointer font-bold w-full sm:w-auto"
+          >
             Our Services
           </Link>
         </div>
