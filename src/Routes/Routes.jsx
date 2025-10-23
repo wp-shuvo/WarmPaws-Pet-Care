@@ -9,6 +9,8 @@ import Register from '../Components/LogInOut/Register';
 import MyProfile from '../Pages/MyProfile/MyProfile';
 import PrivateRoutes from './PrivateRoutes';
 import ForgetPass from '../Components/LogInOut/ForgetPass';
+import UpdateProfile from '../Pages/MyProfile/UpdateProfile';
+import ServicesHome from '../Components/Services/ServicesHome';
 
 const router = createBrowserRouter([
   {
@@ -35,10 +37,26 @@ const router = createBrowserRouter([
         },
       },
       {
+        path: '/services',
+        element: (
+          <PrivateRoutes>
+            <ServicesHome />
+          </PrivateRoutes>
+        ),
+      },
+      {
         path: '/myprofile',
         element: (
           <PrivateRoutes>
             <MyProfile />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: '/updateprofile',
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile />
           </PrivateRoutes>
         ),
       },

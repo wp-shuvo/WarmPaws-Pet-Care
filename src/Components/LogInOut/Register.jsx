@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
 import { toast } from 'react-toastify';
+import 'animate.css';
 
 const Register = () => {
   const { registerUser, errorInvalid, setErrorInvalid, setUser } =
@@ -34,11 +35,11 @@ const Register = () => {
         console.log(result.user);
         setErrorInvalid('');
         toast('✅ Account created successfully!');
-        // setUser({
-        //   ...result.user,
-        //   displayName: name,
-        //   photoURL: ptotoUrl,
-        // });
+        setUser({
+          ...result.user,
+          displayName: name,
+          photoURL: ptotoUrl,
+        });
         event.target.reset();
         naviagte(location?.state || '/');
       })
@@ -52,7 +53,7 @@ const Register = () => {
     <div className="hero min-h-screen">
       <div className="hero-content flex-col">
         {/* Left Section (Text) */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-5 animate__animated animate__fadeInDown">
           <h1 className="text-5xl font-bold text-[#4A2C1D]">
             Register Your Account
           </h1>

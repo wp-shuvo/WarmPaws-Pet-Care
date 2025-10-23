@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 
-const Services = () => {
+const ServicesHome = () => {
   const [services, setServices] = useState([]);
 
   // Load data
@@ -14,8 +14,8 @@ const Services = () => {
   }, []);
 
   return (
-    <div>
-      <div className="mx-auto text-center mb-10">
+    <div className="mb-7">
+      <div className="mx-auto text-center mt-8 mb-10">
         <h2 className="text-4xl font-bold text-[#4A2C1D] mb-2">
           Popular Winter Care Services
         </h2>
@@ -57,4 +57,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesHome;

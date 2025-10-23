@@ -8,7 +8,7 @@ const MyProfile = () => {
   const { user } = use(AuthContext);
   return (
     <div className="mx-auto w-[350px] md:w-[500px]  ">
-      <h1 className="text-2xl font-bold mt-10 text-[#4A2C1D]">
+      <h1 className="text-2xl font-bold text-center mt-10 text-[#4A2C1D]">
         Welcome To Your Profile, {user?.displayName}
       </h1>
 
@@ -34,7 +34,7 @@ const MyProfile = () => {
         </h1>
 
         <Link
-          to=""
+          to="/updateprofile"
           className="btn w-full mt-8 bg-[#E88743] text-white font-bold hover:bg-[#C55C2E] border-none flex items-center justify-center gap-2"
         >
           Update Profile

@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
 import { toast } from 'react-toastify';
+import 'animate.css';
 
 const Login = () => {
   const { loginUser, singInWithGoogle } = use(AuthContext);
@@ -43,8 +44,8 @@ const Login = () => {
     <div className="hero min-h-screen">
       <div className="hero-content flex-col">
         {/* Left Section (Text) */}
-        <div className="text-center mb-5">
-          <h1 className="text-5xl font-bold text-[#4A2C1D]">Login now!</h1>
+        <div className="text-center mb-5 animate__animated animate__fadeInDown">
+          <h1 className="text-5xl font-bold text-[#4A2C1D] ">Login now!</h1>
         </div>
 
         {/* Right Section (Form) */}

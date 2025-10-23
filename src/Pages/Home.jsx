@@ -3,7 +3,7 @@ import HeroSection from '../Components/HeroSection';
 import MeetOurVets from '../Components/MeetVrts';
 import ReviewCard from '../Components/reviewCard';
 import WinterCareTips from '../Components/WinterCareTips';
-import Services from '../Components/Services/Services';
+import ServicesHome from '../Components/Services/ServicesHome';
 
 const Home = () => {
   return (
@@ -11,8 +11,8 @@ const Home = () => {
       <div>
         <HeroSection />
       </div>
-      <div className="mt-16">
-        <Services />
+      <div className="mt-7">
+        <ServicesHome />
       </div>
       {/* Winter Care Tips for Pets Section */}
       <div>
