@@ -7,7 +7,7 @@ const ServicesHome = () => {
   // Load data
 
   useEffect(() => {
-    fetch('../../../public/serviecs.json')
+    fetch('./serviecs.json')
       .then(res => res.json())
       .then(data => setServices(data))
       .catch(err => console.error('Failed to load services:', err));
