@@ -1,7 +1,7 @@
 import React from 'react';
 import reviews from '../../public/reviews.json';
 
-const ReviewCard = () => {
+export const ReviewCard = () => {
   return (
     <div className="bg-[#FFF7EC] mt-14">
       <div className="mx-auto">
@@ -45,5 +45,3 @@ const ReviewCard = () => {
     </div>
   );
 };
-
-export default ReviewCard;

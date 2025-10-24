@@ -1,9 +1,9 @@
 import React from 'react';
 import HeroSection from '../Components/HeroSection';
 import MeetOurVets from '../Components/MeetVrts';
-import ReviewCard from '../Components/reviewCard';
 import WinterCareTips from '../Components/WinterCareTips';
 import ServicesHome from '../Components/Services/ServicesHome';
+import { ReviewCard } from '../Components/reviewCard';
 
 const Home = () => {
   return (
