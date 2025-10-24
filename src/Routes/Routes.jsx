@@ -11,11 +11,18 @@ import PrivateRoutes from './PrivateRoutes';
 import ForgetPass from '../Components/LogInOut/ForgetPass';
 import UpdateProfile from '../Pages/MyProfile/UpdateProfile';
 import ServicesHome from '../Components/Services/ServicesHome';
+import ErrrorPage from '../Components/ErrorPage/ErrrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayouuts />,
+    errorElement: <ErrrorPage />,
+    hydrateFallbackElement: (
+      <div className=" w-full h-full flex justify-center mt-2.5 ">
+        <span className="loading loading-dots content-center loading-xl"></span>
+      </div>
+    ),
     children: [
       {
         index: true,
