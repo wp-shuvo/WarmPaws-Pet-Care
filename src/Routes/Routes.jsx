@@ -36,7 +36,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: async ({ params }) => {
-          const res = await fetch('/public/serviecs.json');
+          const res = await fetch('/serviecs.json');
           const data = await res.json();
           const singleData = data.find(s => s.serviceId == params.serviceId);
           console.log(singleData);
