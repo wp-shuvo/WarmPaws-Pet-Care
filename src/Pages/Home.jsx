@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from '../Components/HeroSection';
 import MeetOurVets from '../Components/MeetVrts';
-import ReviewCard from '../Components/reviewCard';
+import ReviewCard from '../Components/ReviewCard';
 import WinterCareTips from '../Components/WinterCareTips';
 import ServicesHome from '../Components/Services/ServicesHome';
 
