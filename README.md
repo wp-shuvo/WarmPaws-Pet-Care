@@ -70,7 +70,7 @@ Follow the steps below to run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/programming-hero-web-course2/b12-a9-firesheild-wp-shuvo
+git clone https://github.com/wp-shuvo/WarmPaws-Pet-Care.git
 
 # Navigate into the project folder
 cd WarmPaws-Pet-Care
@@ -85,4 +85,4 @@ npm run dev
 
 ## 🔥 Live Demo
 
-👉 [**View Live Project**](https://your-live-site-link.com)
+👉 [**View Live Project**](https://warm-paws-pet-care.vercel.app/)
