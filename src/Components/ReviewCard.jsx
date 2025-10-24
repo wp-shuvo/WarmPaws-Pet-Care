@@ -1,5 +1,5 @@
 import React from 'react';
-import reviews from './reviews.json';
+import reviews from '../../public/reviews.json';
 
 const ReviewCard = () => {
   return (
