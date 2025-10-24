@@ -3,7 +3,7 @@ import HeroSection from '../Components/HeroSection';
 import MeetOurVets from '../Components/MeetVrts';
 import WinterCareTips from '../Components/WinterCareTips';
 import ServicesHome from '../Components/Services/ServicesHome';
-import { ReviewCard } from '../Components/reviewCard';
+import ReviewCard from '../Components/ReviewCard';
 
 const Home = () => {
   return (

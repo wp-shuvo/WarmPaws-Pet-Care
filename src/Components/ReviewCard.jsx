@@ -1,11 +1,10 @@
 import React from 'react';
-import reviews from '../../data/reviews.json';
+import reviews from '../../public/reviews.json';
 
-export default function ReviewCard() {
+const ReviewCard = () => {
   return (
     <div className="bg-[#FFF7EC] mt-14">
-      <div className="mx-auto max-w-7xl px-4">
-        {' '}
+      <div className="mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-extrabold text-[#4A2C1D]">
             What Our Customers Say
@@ -14,6 +13,7 @@ export default function ReviewCard() {
             Real stories from pet owners who trust our winter care services.
           </p>
         </div>
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reviews.map(r => (
             <div
@@ -44,4 +44,6 @@ export default function ReviewCard() {
       </div>
     </div>
   );
-}
+};
+
+export default ReviewCard;
