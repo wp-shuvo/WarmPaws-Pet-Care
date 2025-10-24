@@ -9,7 +9,10 @@ const ServicesHome = () => {
   useEffect(() => {
     fetch('./serviecs.json')
       .then(res => res.json())
-      .then(data => setServices(data))
+      .then(data => {
+        setServices(data);
+        console.log('Data form service', data);
+      })
       .catch(err => console.error('Failed to load services:', err));
   }, []);
 
