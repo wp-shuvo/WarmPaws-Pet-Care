@@ -1,11 +1,11 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const BookNowForm = () => {
   const handleBookNow = event => {
     event.preventDefault();
     event.target.reset();
-    toast('✅ Book successfully!');
+    toast.success('✅ Book successfully!');
   };
   return (
     <div className="hero my-7">

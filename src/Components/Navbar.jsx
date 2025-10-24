@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext/Authcontext';
-import { toast, ToastContainer } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
   const { user, singOutUser } = use(AuthContext);
@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleSingOut = () => {
     singOutUser()
       .then(() => {
-        toast('sing-out succesful.');
+        toast.success('sing-out succesful.');
       })
       .catch(error => {
         console.log(error.message);
@@ -74,13 +74,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <div className="flex flex-col items-center mr-3.5">
+        <div className="relative flex flex-col items-center mr-3.5 group">
           {user && (
-            <img
-              className="h-9.5 w-9.5 rounded-full"
-              src={user?.photoURL}
-              alt="profile Picture"
-            />
+            <>
+              <img
+                className="h-10 w-10 rounded-full border-2 border-[#E88743] group-hover:scale-105 transition-transform duration-200"
+                src={user?.photoURL}
+                alt="Profile Picture"
+              />
+              <span className="absolute bottom-[-35px] px-3 py-1 text-[10px] text-white bg-gray-800 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {user?.displayName}
+              </span>
+            </>
           )}
         </div>
         {user ? (
@@ -99,7 +104,6 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <ToastContainer />
     </div>
   );
 };

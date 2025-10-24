@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
 import { useNavigate } from 'react-router';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const UpdateProfile = () => {
   const { updateUserProfile, setLoader } = useContext(AuthContext);
@@ -16,7 +16,7 @@ const UpdateProfile = () => {
     updateUserProfile(name, photoUrl)
       .then(result => {
         naviagte('/myprofile');
-        toast('Update Profile successfully!');
+        toast.success('Update Profile successfully!');
         setLoader(false);
       })
       .catch(error => {
@@ -25,7 +25,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#FFF7EC] via-[#FDF6ED] to-[#F0DCC2] px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-md bg-white border border-[#F0DCC2] rounded-2xl shadow-lg p-8">
         <h1 className="text-center text-3xl font-bold text-[#4A2C1D] mb-6">
           Update Your Profile

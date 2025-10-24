@@ -1,9 +1,9 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
-import { toast } from 'react-toastify';
 import 'animate.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const { loginUser, singInWithGoogle } = use(AuthContext);
@@ -21,12 +21,12 @@ const Login = () => {
       .then(result => {
         console.log(result.user);
         event.target.reset();
-        toast('✅ login successfully!');
+        toast.success('✅ login successfully!');
         naviagte(location?.state || '/');
       })
       .catch(error => {
         console.log(error.message);
-        toast(error.message);
+        toast.error(error.message);
       });
   };
 

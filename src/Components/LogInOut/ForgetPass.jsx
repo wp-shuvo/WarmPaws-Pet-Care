@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
-import { toast } from 'react-toastify';
 import 'animate.css';
+import toast from 'react-hot-toast';
 
 function ForgetPass() {
   const { forgetPassword } = useContext(AuthContext);
@@ -11,7 +11,7 @@ function ForgetPass() {
     const email = e.target.email.value;
 
     if (!email) {
-      toast('Please provide an email address.');
+      toast.error('Please provide an email address.');
       return;
     }
 

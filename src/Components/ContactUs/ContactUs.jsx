@@ -1,10 +1,9 @@
 import React from 'react';
-import { ToastContainer, toast, Bounce } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast from 'react-hot-toast';
 
 const ContactUs = () => {
   const handleClick = () => {
-    toast('✅ Send Message successfully!');
+    toast.success('✅ Send Message successfully!');
   };
 
   return (

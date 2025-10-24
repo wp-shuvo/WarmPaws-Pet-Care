@@ -1,9 +1,9 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext/Authcontext';
-import { toast } from 'react-toastify';
 import 'animate.css';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const { registerUser, errorInvalid, setErrorInvalid, setUser } =
@@ -36,7 +36,7 @@ const Register = () => {
       .then(result => {
         console.log(result.user);
         setErrorInvalid('');
-        toast('✅ Account created successfully!');
+        toast.success('✅ Account created successfully!');
         setUser({
           ...result.user,
           displayName: name,
@@ -47,7 +47,7 @@ const Register = () => {
       })
       .catch(error => {
         console.log(error.message);
-        toast(error.message);
+        toast.error(error.message);
       });
   };
 
