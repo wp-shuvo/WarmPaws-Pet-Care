@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Sophia Rahman",
+    "petName": "Bella",
+    "rating": 5,
+    "review": "WarmPaws has been a lifesaver this winter! Bella’s new coat keeps her cozy and stylish. The vet tips are super helpful too!",
+    "date": "2025-01-10",
+    "img": "https://randomuser.me/api/portraits/women/65.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "petName": "Milo",
+    "rating": 4,
+    "review": "Loved the quick delivery of pet sweaters! Milo looks adorable and stays warm. Great quality and friendly support.",
+    "date": "2025-02-02",
+    "img": "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Rina Akter",
+    "petName": "Snowy",
+    "rating": 5,
+    "review": "Fantastic grooming service! Snowy came back fluffy, clean, and happy. Definitely booking again next month.",
+    "date": "2025-02-18",
+    "img": "https://randomuser.me/api/portraits/women/31.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mahi Chowdhury",
+    "petName": "Coco",
+    "rating": 5,
+    "review": "Excellent winter care guide — really helped me understand how to keep Coco safe from the cold. Highly recommend!",
+    "date": "2025-03-01",
+    "img": "https://randomuser.me/api/portraits/women/12.jpg"
+  }
+]
