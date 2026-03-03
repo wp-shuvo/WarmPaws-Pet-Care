@@ -6,44 +6,49 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
 const Register = () => {
-  const { registerUser, errorInvalid, setErrorInvalid, setUser } =
+  const { registerUser, errorInvalid, setErrorInvalid, setUser, updateUserProfile } =
     use(AuthContext);
   const [showPass, setShowPass] = useState(false);
   const location = useLocation();
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
 
   const handleRegister = event => {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
-    const ptotoUrl = event.target.photoUrl.value;
+    const photoUrl = event.target.photoUrl.value;
     const password = event.target.password.value;
 
-    console.log(name, ptotoUrl);
     if (password.length < 6) {
-      setErrorInvalid('Password at least 6 carecter');
+      setErrorInvalid('Password at least 6 characters');
       return;
     }
     const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).+$/;
     if (!passwordRegex.test(password)) {
       setErrorInvalid(
-        'Password at least one Upparcase Letter , one LowerCase Letter '
+        'Password must contain at least one uppercase and one lowercase letter'
       );
       return;
     }
 
     registerUser(email, password)
       .then(result => {
-        console.log(result.user);
-        setErrorInvalid('');
-        toast.success('✅ Account created successfully!');
-        setUser({
-          ...result.user,
-          displayName: name,
-          photoURL: ptotoUrl,
-        });
-        event.target.reset();
-        naviagte(location?.state || '/');
+        updateUserProfile(name, photoUrl)
+          .then(() => {
+            setUser({
+              ...result.user,
+              displayName: name,
+              photoURL: photoUrl,
+            });
+            setErrorInvalid('');
+            toast.success('✅ Account created successfully!');
+            event.target.reset();
+            navigate(location?.state || '/');
+          })
+          .catch(err => {
+            console.log(err.message);
+            toast.error('Failed to update profile');
+          });
       })
       .catch(error => {
         console.log(error.message);
