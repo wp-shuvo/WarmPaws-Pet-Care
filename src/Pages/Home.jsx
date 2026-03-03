@@ -7,11 +7,12 @@ import ServicesHome from '../Components/Services/ServicesHome';
 
 const Home = () => {
   return (
-    <div className="text-[#4A2C1D] px-4 md:px-10 lg:px-32 py-4 md:py-5 lg:py-10 ">
+    <div>
       <div>
         <HeroSection />
       </div>
-      <div className="mt-7">
+      <div className="text-[#4A2C1D] px-4 md:px-10 lg:px-32 py-4 md:py-5 lg:py-10 " >
+         <div className="mt-7">
         <ServicesHome />
       </div>
       {/* Winter Care Tips for Pets Section */}
@@ -26,6 +27,7 @@ const Home = () => {
       <div>
         <ReviewCard />
       </div>
+     </div>
     </div>
   );
 };
